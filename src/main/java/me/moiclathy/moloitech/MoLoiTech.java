@@ -28,18 +28,18 @@ public class MoLoiTech extends JavaPlugin implements SlimefunAddon {
          * 1. Creating a new Category
          * This Category will use the following ItemStack
          */
-        ItemStack itemGroupItem = new CustomItemStack(Material.DIAMOND, "&4Addon Category", "", "&a> Click to open");
+        ItemStack Teststuff1 = new CustomItemStack(Material.DIAMOND, "&4Test Category1", "测试物品组01", "&a> Click to open");
 
         // Give your Category a unique id.
-        NamespacedKey itemGroupId = new NamespacedKey(this, "addon_category");
-        ItemGroup itemGroup = new ItemGroup(itemGroupId, itemGroupItem);
+        NamespacedKey teststuff1 = new NamespacedKey(this, "test_category1");
+        ItemGroup itemGroup = new ItemGroup(teststuff1, Teststuff1);
 
         /*
          * 2. Create a new SlimefunItemStack
          * This class has many constructors, it is very important
          * that you give each item a unique id.
          */
-        SlimefunItemStack slimefunItem = new SlimefunItemStack("COOL_DIAMOND", Material.DIAMOND, "&4Cool Diamond", "&c+20% Coolness");
+        SlimefunItemStack slimefunItem = new SlimefunItemStack("TESTITEM001", Material.DIAMOND, "&4Cool Diamond", "&c+20% Coolness");
 
         /*
          * 3. Creating a Recipe
