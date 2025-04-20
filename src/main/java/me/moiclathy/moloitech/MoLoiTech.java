@@ -1,5 +1,6 @@
 package me.moiclathy.moloitech;
 
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -59,6 +60,18 @@ public class MoLoiTech extends JavaPlugin implements SlimefunAddon {
          */
         SlimefunItem item = new SlimefunItem(itemGroup, slimefunItem, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         item.register(this);
+        //创建测试物品组2
+        NamespacedKey TESTGROUP2 = new NamespacedKey(this, "test_category2");
+        ItemStack categoryItem2 = new CustomItemStack(Material.DIAMOND, "&4Our very cool Category2");
+        ItemGroup itemGroup2 = new ItemGroup(TESTGROUP2, categoryItem2);
+        SlimefunItemStack itemStack2 = new SlimefunItemStack("MY_ADDON_ITEM", Material.EMERALD, "&aPretty cool Emerald", "", "&7This is awesome");
+        ItemStack[] recipe2 = {
+                new ItemStack(Material.DIAMOND),    null,                               new ItemStack(Material.DIAMOND),
+                null,                               SlimefunItems.CARBONADO,            null,
+                new ItemStack(Material.DIAMOND),    null,                               new ItemStack(Material.DIAMOND)
+        };
+        SlimefunItem sfItem = new SlimefunItem(itemGroup2, itemStack2, RecipeType.ENHANCED_CRAFTING_TABLE, recipe2);
+        sfItem.register(this);
     }
 
     @Override
